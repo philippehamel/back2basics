@@ -1,0 +1,14 @@
+[
+  {
+    "device_id": "cam-001",
+    "timestamp": "2026-10-26T12:00:00Z",
+    "event_type": "inference",
+    "value": 42.5
+  },
+  {
+    "device_id": "cam-002",
+    "timestamp": "invalid-date",
+    "event_type": "temperature",
+    "value": 76.2
+  }
+]
