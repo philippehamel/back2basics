@@ -67,3 +67,15 @@ def validate(item: object) -> Event | Rejection:
             event_type=item["event_type"],
             value=float(item["value"]),
         )
+
+
+def split(items: list[object]) -> tuple[list[Event], list[Rejection]]:
+    events: list[Event] = []
+    rejections: list[Rejection] = []
+    for item in items:
+        result = validate(item)
+        if isinstance(result, Event):
+            events.append(result)
+        else:
+            rejections.append(result)
+    return (events, rejections)
