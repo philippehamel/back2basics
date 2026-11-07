@@ -1,4 +1,5 @@
 import json
+from collections.abc import Sequence
 from datetime import datetime
 from pathlib import Path
 
@@ -69,7 +70,7 @@ def validate(item: object) -> Event | Rejection:
         )
 
 
-def split(items: list[object]) -> tuple[list[Event], list[Rejection]]:
+def split(items: Sequence[object]) -> tuple[list[Event], list[Rejection]]:
     events: list[Event] = []
     rejections: list[Rejection] = []
     for item in items:
